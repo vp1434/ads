@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master Digital Ads & AI – 3 eBook Combo ₹499</title>
+<meta name="description" content="Meta Ads + ChatGPT Ads + Google Ads. 3 complete eBooks with templates and case studies for ₹499.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14123b; --paper:#f4f6ff; --card:#fff; --muted:#5b5f80;
+  --a:#0866ff; --a-soft:#e4eeff; --line:#dfe3f5;
+  --head:'Bricolage Grotesque','Segoe UI',sans-serif; --body:'DM Sans','Segoe UI',sans-serif;
+}
+:root[data-book="gpt"]{--a:#10a37f;--a-soft:#dcf5ec}
+:root[data-book="google"]{--a:#ea4335;--a-soft:#fdeae7}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--ink:#eef0ff;--paper:#12112b;--card:#1b1a3d;--muted:#a9acd0;--line:#2e2c5c;--a-soft:#23224a}
+  :root[data-book="gpt"]:not([data-theme="light"]){--a-soft:#10332b}
+  :root[data-book="google"]:not([data-theme="light"]){--a-soft:#3a1c24}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;transition:background .4s;padding-bottom:84px}
+img{max-width:100%;height:auto;display:block}
+.banner img{width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:clamp(1.7rem,4vw,2.6rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:56ch;margin-bottom:32px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--paper);font-size:.9rem}
+:root[data-theme="light"] .top{color:#f4f6ff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
+.top b{font-variant-numeric:tabular-nums;background:var(--a);color:#fff;padding:2px 8px;border-radius:6px}
+
+/* buttons */
+.buy{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--a);color:#fff;text-decoration:none;font-weight:700;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;font:700 1rem var(--body);box-shadow:0 8px 0 -2px color-mix(in srgb,var(--a) 55%,#000);transition:transform .15s,box-shadow .15s,background .4s}
+.buy:hover{transform:translateY(3px);box-shadow:0 4px 0 -2px color-mix(in srgb,var(--a) 55%,#000)}
+.buy:active{transform:translateY(6px);box-shadow:none}
+.buy.sm{padding:8px 18px;font-size:.9rem;box-shadow:none}
+.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+
+/* hero */
+.hero{padding-top:40px}
+.hero h1{font-size:clamp(2.3rem,7vw,4.6rem);max-width:15ch}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:50ch;margin:18px 0 26px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.price-tag{font-family:var(--head);font-size:1.5rem;font-weight:800}
+.price-tag s{color:var(--muted);font-weight:500;font-size:1.05rem;margin-left:8px}
+.banner{margin-top:40px;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(20,18,59,.45);border:1px solid var(--line)}
+
+/* book switcher: the one memorable thing */
+.stage{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:center}
+.books{display:flex;gap:14px;perspective:900px;justify-content:center}
+.book{width:30%;min-width:84px;aspect-ratio:3/4.2;border:0;border-radius:6px 14px 14px 6px;color:#fff;cursor:pointer;padding:14px 8px;font:800 .95rem var(--head);display:flex;flex-direction:column;justify-content:flex-end;text-align:left;transform:rotateY(-24deg);transition:transform .35s,filter .3s;box-shadow:-8px 10px 22px -8px rgba(0,0,0,.4),inset 8px 0 0 rgba(255,255,255,.22)}
+.book[data-b="meta"]{background:linear-gradient(160deg,#3f8bff,#0044c9)}
+.book[data-b="gpt"]{background:linear-gradient(160deg,#27c29a,#0a6b53)}
+.book[data-b="google"]{background:linear-gradient(160deg,#ff7a6b,#c5221f)}
+.book small{font:500 .7rem var(--body);opacity:.85;display:block;margin-bottom:4px}
+.book:not([aria-selected="true"]){filter:saturate(.35) brightness(.95);transform:rotateY(-24deg) scale(.92)}
+.book[aria-selected="true"]{transform:rotateY(-6deg) translateY(-14px) scale(1.04)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;border-top:6px solid var(--a);transition:border-color .4s}
+.panel h3{font-size:1.5rem;margin-bottom:6px}
+.panel p{color:var(--muted);margin-bottom:16px}
+.panel ul{list-style:none;padding:0;margin-bottom:22px;display:grid;gap:8px}
+.panel li{padding-left:28px;position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:.35em;width:16px;height:16px;border-radius:50%;background:var(--a);box-shadow:inset 0 0 0 4px var(--a-soft)}
+
+/* preview reader */
+.reader{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:20px;border-top:6px solid var(--a);transition:border-color .4s;outline:none}
+.rtabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.rtabs button{flex:1;min-width:110px;border:2px solid var(--line);background:transparent;color:var(--ink);border-radius:14px;padding:10px 14px;font:700 .95rem var(--body);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.25s}
+.rtabs button i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.rtabs button[aria-selected="true"]{background:var(--c);border-color:var(--c);color:#fff}
+.rtabs button[aria-selected="true"] i{background:#fff}
+.rmain{display:flex;align-items:center;gap:12px;perspective:1400px}
+.sheet{flex:0 1 auto;position:relative;margin:0 auto;width:min(100%,calc(68vh*var(--r,1.6)));aspect-ratio:var(--r,1.6);border-radius:6px 16px 16px 6px;background:var(--a-soft);overflow:hidden;box-shadow:-10px 16px 40px -14px rgba(20,18,59,.55),inset 10px 0 14px -8px rgba(0,0,0,.3);transform-origin:left center;transition:transform .24s ease,opacity .24s;cursor:zoom-in}
+.sheet img{width:100%;height:100%;object-fit:contain;display:block}
+.sheet.out-n{transform:rotateY(-75deg);opacity:0}
+.sheet.out-p{transform:rotateY(75deg);opacity:0}
+.sheet.in-n{transform:rotateY(55deg);opacity:0;transition:none}
+.sheet.in-p{transform:rotateY(-55deg);opacity:0;transition:none}
+.nav{flex:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--a);color:#fff;font-size:1.7rem;line-height:1;cursor:pointer;transition:transform .15s,background .4s}
+.nav:hover{transform:scale(1.12)}
+.ph{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:20px;color:var(--muted);font-weight:700;background:repeating-linear-gradient(45deg,var(--a-soft),var(--a-soft) 12px,transparent 12px,transparent 24px)}
+.sheet.miss .ph{display:flex}
+.sheet.miss img{visibility:hidden}
+.rinfo{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 4px 12px;flex-wrap:wrap;font-weight:700}
+.rinfo span{color:var(--muted);font-weight:500}
+.prog{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:14px}
+.prog i{display:block;height:100%;background:var(--a);width:20%;transition:width .3s,background .4s}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.thumbs button{position:relative;border:2px solid transparent;border-radius:10px;padding:0;overflow:hidden;cursor:pointer;aspect-ratio:4/3;background:var(--a-soft);opacity:.6;transition:.2s}
+.thumbs button[aria-current="true"]{border-color:var(--a);opacity:1;transform:translateY(-4px)}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.thumbs b{position:absolute;left:6px;bottom:4px;font:800 .75rem var(--head);color:#fff;text-shadow:0 1px 3px #000}
+.lb{position:fixed;inset:0;background:rgba(10,9,30,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.lb.on{display:flex}
+.lb img{max-width:92vw;max-height:86vh;border-radius:12px}
+.lb .x{position:absolute;top:14px;right:20px;font-size:2.2rem;background:none;border:0;color:#fff;cursor:pointer}
+.lb .nav{position:absolute;top:50%;transform:translateY(-50%)}
+.lb .nav:hover{transform:translateY(-50%) scale(1.12)}
+.lb .prev{left:14px}.lb .next{right:14px}
+@media (max-width:760px){.nav{width:36px;height:36px;font-size:1.3rem}.rmain{gap:6px}.rtabs button{min-width:90px;font-size:.85rem;padding:8px}}
+
+/* features + offer */
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.feat h3{font-size:1.05rem;margin-bottom:6px}
+.feat p{font-size:.92rem;color:var(--muted)}
+.offer{background:var(--ink);color:var(--paper);border-radius:28px;padding:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+:root[data-theme="light"] .offer{color:#f4f6ff}
+.offer .big{font-family:var(--head);font-size:clamp(3rem,9vw,5.5rem);font-weight:800;line-height:1}
+.offer s{opacity:.6;font-size:1.2rem}
+.offer ul{list-style:none;padding:0;display:grid;gap:8px;margin:16px 0 0}
+.offer li::before{content:"✓ ";color:var(--a);font-weight:700}
+.clock{display:flex;gap:10px;margin:18px 0}
+.clock div{background:rgba(255,255,255,.1);border-radius:12px;padding:10px 14px;text-align:center;min-width:64px}
+.clock b{display:block;font:800 1.8rem var(--head);font-variant-numeric:tabular-nums}
+.clock span{font-size:.7rem;opacity:.7}
+
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--muted);margin-top:10px}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 20px}
+
+/* sticky buy bar + toast */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:1px solid var(--line);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s}
+.bar.on{transform:none}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;z-index:60;font-size:.9rem}
+.toast.on{opacity:1;transform:translateX(-50%)}
+
+@media (max-width:760px){
+  .stage,.offer{grid-template-columns:1fr}
+  .offer{padding:28px}
+  .top .t{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <span>Combo offer ends in <b data-timer>--:--:--</b></span>
+    <a class="buy sm" data-buy="top" href="https://superprofile.bio/vp/adsfull" target="_blank" rel="noopener">Buy combo ₹<span data-price></span></a>
+  </div>
+</div>
+
+<header class="hero wrap">
+  <h1>Learn Meta, ChatGPT and Google Ads in one combo.</h1>
+  <p>Three beginner-friendly eBooks with real campaign examples, ready-to-use prompts and templates. Read at your own pace, run your first campaign this week.</p>
+  <div class="cta-row">
+    <a class="buy" data-buy="hero" href="https://superprofile.bio/vp/adsfull" target="_blank" rel="noopener">Get the combo now</a>
+    <span class="price-tag">₹<span data-price></span><s>₹<span data-mrp></span></s></span>
+    <a class="buy ghost sm" href="#books">See what’s inside</a>
+  </div>
+  <div class="banner"><img src="banner.png" alt="Master Digital Ads and AI: Meta Ads, ChatGPT Ads and Google Ads eBook combo" width="1672" height="941"></div>
+</header>
+
+<section id="books">
+  <div class="wrap">
+    <h2>Pick a book, see what you get</h2>
+    <p class="lead">Each eBook can be read on its own. Together they cover the three places your customers see ads.</p>
+    <div class="stage">
+      <div class="books" role="tablist" aria-label="eBooks">
+        <button class="book" role="tab" data-b="meta" aria-selected="true"><small>Complete guide</small>Meta Ads</button>
+        <button class="book" role="tab" data-b="gpt" aria-selected="false"><small>Complete course</small>ChatGPT Ads</button>
+        <button class="book" role="tab" data-b="google" aria-selected="false"><small>Complete course</small>Google Ads</button>
+      </div>
+      <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="preview">
+  <div class="wrap">
+    <h2>Flip through the pages</h2>
+    <p class="lead">5 sample pages from every eBook. Use the arrows, swipe, or your keyboard’s left and right keys. Tap a page to zoom.</p>
+    <div class="reader" id="reader" tabindex="0" aria-label="eBook page previews">
+      <div class="rtabs" role="tablist" id="rtabs"></div>
+      <div class="rmain">
+        <button class="nav" id="prev" aria-label="Previous page">‹</button>
+        <div class="sheet" id="sheet"><img id="pg" alt=""><div class="ph" id="ph"></div></div>
+        <button class="nav" id="next" aria-label="Next page">›</button>
+      </div>
+      <div class="rinfo"><b id="cnt"></b><span id="cap"></span><a class="buy sm" data-buy="reader" href="https://superprofile.bio/vp/adsfull" target="_blank" rel="noopener">Unlock full eBooks</a></div>
+      <div class="prog"><i id="prog"></i></div>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Everything you need to start</h2>
+    <p class="lead">&nbsp;</p>
+    <div class="feats">
+      <div class="feat"><h3>Step-by-step learning</h3><p>Start from zero. Each chapter builds on the last.</p></div>
+      <div class="feat"><h3>Campaign examples</h3><p>See how real campaigns are set up and why.</p></div>
+      <div class="feat"><h3>Practical strategies</h3><p>Targeting, bidding and budgeting you can copy.</p></div>
+      <div class="feat"><h3>Templates and prompts</h3><p>Ad copy prompts and templates ready to use.</p></div>
+      <div class="feat"><h3>Case studies</h3><p>Learn what worked and what to fix.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="offer">
+  <div class="wrap">
+    <div class="offer">
+      <div>
+        <p>Combo offer: 3 premium eBooks</p>
+        <div class="big">₹<span data-price></span> <s>₹<span data-mrp></span></s></div>
+        <div class="clock" aria-label="Offer countdown">
+          <div><b data-h>00</b><span>hours</span></div>
+          <div><b data-m>00</b><span>minutes</span></div>
+          <div><b data-s>00</b><span>seconds</span></div>
+        </div>
+        <a class="buy" data-buy="offer" href="https://superprofile.bio/vp/adsfull" target="_blank" rel="noopener">Get the combo now</a>
+      </div>
+      <ul>
+        <li>One-time payment, no subscription</li>
+        <li>PDF format, works on phone and laptop</li>
+        <li>Beginner friendly</li>
+        <li>Learn at your own pace</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Questions before you buy</h2>
+    <p class="lead">&nbsp;</p>
+    <details><summary>Is this for complete beginners?</summary><p>Yes. The books start with the basics and move to advanced campaign optimisation.</p></details>
+    <details><summary>How will I get the eBooks?</summary><p>After payment you get the PDF files. Check your email and the payment confirmation page.</p></details>
+    <details><summary>Is it a monthly subscription?</summary><p>No. It is a single one-time payment for all three eBooks.</p></details>
+    <details><summary>Can I buy just one eBook?</summary><p>The combo is the best value. Message us if you want a single book.</p></details>
+    <div style="margin-top:24px"><a class="buy" data-buy="faq" href="https://superprofile.bio/vp/adsfull" target="_blank" rel="noopener">Buy the combo</a></div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Master Digital Ads & AI. All rights reserved.</footer>
+
+<div class="bar" id="bar">
+  <div><b style="font-family:var(--head);font-size:1.2rem">₹<span data-price></span></b> <small style="color:var(--muted)">3 eBooks · ends in <span data-timer>--:--:--</span></small></div>
+  <a class="buy sm" data-buy="sticky" href="https://superprofile.bio/vp/adsfull" target="_blank" rel="noopener">Buy now</a>
+</div>
+<div class="toast" id="toast"></div>
+
+<div class="lb" id="lb"><button class="x" aria-label="Close preview">×</button><button class="nav prev" aria-label="Previous page">‹</button><img alt="eBook page preview"><button class="nav next" aria-label="Next page">›</button></div>
+
+<script>
+/* ====== EDIT THESE ====== */
+const CONFIG = {
+  BUY_URL: "https://superprofile.bio/vp/adsfull",   // Razorpay / Instamojo / Payment Page link
+  PRICE: 499,
+  MRP: 1499,                // crossed-out price, set to 0 to hide
+  OFFER_HOURS: 24,          // timer length; restarts per visitor after it ends
+  PREVIEWS: {   // 5 page images per eBook, keep them next to index.html
+    meta:   ["meta-1.png","meta-2.png","meta-3.png","meta-4.png","meta-5.png"],
+    gpt:    ["gpt-1.png","gpt-2.png","gpt-3.png","gpt-4.png","gpt-5.png"],
+    google: ["google-1.png","google-2.png","google-3.png","google-4.png","google-5.png"]
+  }
+};
+/* ======================== */
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+// prices + buy links (all buttons use the single BUY_URL)
+$$("[data-price]").forEach(e => e.textContent = CONFIG.PRICE);
+$$("[data-mrp]").forEach(e => e.textContent = CONFIG.MRP);
+if (!CONFIG.MRP) $$("s").forEach(e => e.hidden = true);
+$$("[data-buy]").forEach(a => {
+  a.href = CONFIG.BUY_URL;
+  a.target = "_blank"; a.rel = "noopener";
+  a.addEventListener("click", () => {
+    const t = $("#toast"); t.textContent = "Opening secure checkout…"; t.classList.add("on");
+    setTimeout(() => t.classList.remove("on"), 2200);
+  });
+});
+$("#yr").textContent = new Date().getFullYear();
+
+// countdown (kept in localStorage so refresh doesn't reset it)
+function getEnd() {
+  let end = 0;
+  try { end = +localStorage.getItem("offerEnd") || 0; } catch (e) {}
+  if (end < Date.now()) {
+    end = Date.now() + CONFIG.OFFER_HOURS * 3600e3;
+    try { localStorage.setItem("offerEnd", end); } catch (e) {}
+  }
+  return end;
+}
+let end = getEnd();
+const pad = n => String(n).padStart(2, "0");
+function tick() {
+  let left = end - Date.now();
+  if (left <= 0) { end = getEnd(); left = end - Date.now(); }
+  const h = Math.floor(left / 3600e3), m = Math.floor(left % 3600e3 / 60e3), s = Math.floor(left % 60e3 / 1e3);
+  $$("[data-timer]").forEach(e => e.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`);
+  $("[data-h]").textContent = pad(h); $("[data-m]").textContent = pad(m); $("[data-s]").textContent = pad(s);
+}
+tick(); setInterval(tick, 1000);
+
+// book switcher
+const BOOKS = {
+  meta: { t: "Meta Ads: complete guide and practical course", p: "Facebook and Instagram ads for business, brand and income.",
+    l: ["Step-by-step learning", "Real campaign examples", "Ad strategy and targeting", "Budgeting and bidding", "Conversion and sales"] },
+  gpt: { t: "ChatGPT Ads: complete course", p: "Create better ad copy, campaigns and marketing strategies with AI.",
+    l: ["AI ad copy and creatives", "Ready-to-use prompts", "Real ad examples", "Marketing strategies", "Bonus templates"] },
+  google: { t: "Google Ads: complete course", p: "From basics to advanced: run profitable campaigns.",
+    l: ["Search and Display ads", "YouTube and Shopping ads", "Performance Max", "Real case studies", "Optimization tips"] }
+};
+function showBook(k) {
+  document.documentElement.dataset.book = k;
+  $$(".book").forEach(b => b.setAttribute("aria-selected", b.dataset.b === k));
+  const d = BOOKS[k];
+  $("#panel").innerHTML = `<h3>${d.t}</h3><p>${d.p}</p><ul>${d.l.map(x => `<li>${x}</li>`).join("")}</ul><a class="buy" data-buy="panel" href="https://superprofile.bio/vp/adsfull" target="_blank" rel="noopener">Get all 3 for ₹${CONFIG.PRICE}</a>`;
+  if (typeof setReader === "function" && rk !== k) setReader(k);
+}
+$$(".book").forEach(b => b.addEventListener("click", () => showBook(b.dataset.b)));
+
+// page reader
+const SUBJ = { meta: ["Meta Ads", "#0866ff"], gpt: ["ChatGPT Ads", "#10a37f"], google: ["Google Ads", "#ea4335"] };
+let rk = "meta", ri = 0;
+const sheet = $("#sheet"), pg = $("#pg"), lb = $("#lb"), lbImg = $("img", lb), files = () => CONFIG.PREVIEWS[rk];
+$("#rtabs").innerHTML = Object.entries(SUBJ).map(([k, v]) => `<button role="tab" data-k="${k}" style="--c:${v[1]}"><i></i>${v[0]}</button>`).join("");
+pg.onload = () => sheet.style.setProperty("--r", pg.naturalWidth / pg.naturalHeight);
+pg.onerror = () => sheet.classList.add("miss");
+function paint() {
+  const f = files()[ri], n = files().length;
+  sheet.classList.remove("miss");
+  pg.alt = `${SUBJ[rk][0]} sample page ${ri + 1}`; pg.src = f;
+  $("#ph").textContent = `Add ${f} next to index.html`;
+  $("#cnt").textContent = `Page ${ri + 1} of ${n}`;
+  $("#cap").textContent = SUBJ[rk][0] + " sample";
+  $("#prog").style.width = ((ri + 1) / n * 100) + "%";
+  $$("#thumbs button").forEach((b, i) => b.setAttribute("aria-current", i === ri));
+  if (lb.classList.contains("on")) lbImg.src = f;
+}
+function setReader(k) {
+  rk = k; ri = 0;
+  $$("#rtabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.k === k));
+  $("#thumbs").innerHTML = files().map((f, i) => `<button data-i="${i}" aria-label="Page ${i + 1}"><img src="${f}" alt="" loading="lazy" onerror="this.style.display='none'"><b>${i + 1}</b></button>`).join("");
+  paint();
+}
+function flip(to, d) {
+  const n = files().length; ri = (to + n) % n;
+  sheet.classList.add(d > 0 ? "out-n" : "out-p");
+  setTimeout(() => {
+    paint();
+    sheet.classList.remove("out-n", "out-p");
+    sheet.classList.add(d > 0 ? "in-n" : "in-p");
+    void sheet.offsetWidth;
+    sheet.classList.remove("in-n", "in-p");
+  }, 240);
+}
+const step = d => flip(ri + d, d);
+$("#prev").onclick = () => step(-1);
+$("#next").onclick = () => step(1);
+$("#rtabs").onclick = e => { const b = e.target.closest("button"); if (b) showBook(b.dataset.k); };
+$("#thumbs").onclick = e => { const b = e.target.closest("button"); if (b && +b.dataset.i !== ri) flip(+b.dataset.i, +b.dataset.i > ri ? 1 : -1); };
+$("#reader").addEventListener("keydown", e => { if (e.key === "ArrowRight") step(1); if (e.key === "ArrowLeft") step(-1); });
+let sx = 0;
+sheet.addEventListener("touchstart", e => sx = e.touches[0].clientX, { passive: true });
+sheet.addEventListener("touchend", e => { const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); });
+// zoom lightbox
+sheet.onclick = () => { if (sheet.classList.contains("miss")) return; lbImg.src = files()[ri]; lb.classList.add("on"); };
+const lbStep = d => { ri = (ri + d + files().length) % files().length; paint(); };
+$(".prev", lb).onclick = e => { e.stopPropagation(); lbStep(-1); };
+$(".next", lb).onclick = e => { e.stopPropagation(); lbStep(1); };
+lb.addEventListener("click", e => { if (e.target === lb || e.target.classList.contains("x")) lb.classList.remove("on"); });
+document.addEventListener("keydown", e => {
+  if (!lb.classList.contains("on")) return;
+  if (e.key === "Escape") lb.classList.remove("on");
+  if (e.key === "ArrowRight") lbStep(1);
+  if (e.key === "ArrowLeft") lbStep(-1);
+});
+setReader("meta"); showBook("meta");
+
+// sticky buy bar appears after hero
+const bar = $("#bar");
+const onScroll = () => bar.classList.toggle("on", scrollY > 500);
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+</script>
+</body>
+</html>
